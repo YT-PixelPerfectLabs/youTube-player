@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Player</title>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="player-card">
+
+    <div class="video-wrapper">
+
+      <div class="player" id="player"></div>
+
+      <div class="overlay-play" id="overlayPlay">
+        <i class="fas fa-play"></i>
+      </div>
+
+      <div class="controls-bar">
+
+        <button id="playPauseBtn" class="btn">
+          <i class="fas fa-play"></i>
+        </button>
+
+        <div class="volume-container">
+          <button id="muteBtn" class="btn">
+            <i class="fas fa-volume-high"></i>
+          </button>
+          <input type="range" id="volumeSlider" min="0" max="100" value="100"
+            class="slider volume" />
+        </div>
+
+        <select id="playbackSpeed" class="control-select">
+          <option value="1">1x</option>
+          <option value="1.5">1.5x</option>
+          <option value="2">2x</option>
+        </select>
+
+        <span class="time">
+          <span id="currentTime">0:00</span> /
+          <span id="duration">0:00</span>
+        </span>
+
+        <div class="seek-container">
+          <input type="range" id="seekBar" min="0" max="100" value="0"
+            class="slider seek" />
+        </div>
+
+        <button id="fullscreenBtn" class="fullscreen-btn">
+          <i class="fas fa-expand"></i>
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
